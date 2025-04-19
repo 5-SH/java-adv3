@@ -1,4 +1,4 @@
-package lambda.ex3;
+package lambda.ex2;
 
 import lambda.MyPredicate;
 
