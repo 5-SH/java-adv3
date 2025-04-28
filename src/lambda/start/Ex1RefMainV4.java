@@ -5,7 +5,7 @@ import lambda.Procedure;
 
 import java.util.Random;
 
-public class Ex1RefMainV3 {
+public class Ex1RefMainV4 {
     public static void hello(Procedure procedure) {
         long startNs = System.nanoTime();
 
