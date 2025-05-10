@@ -2,8 +2,9 @@ package optional;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
-public class OptionalStartMain1 {
+public class OptionalStartMain2 {
 
     private static final Map<Long, String> map = new HashMap<>();
 
@@ -18,13 +19,15 @@ public class OptionalStartMain1 {
     }
 
     static void findAndPrint(Long id) {
-        String name = findByName(id);
-
-        if (name != null) System.out.println(id + ": " + name.toUpperCase());
-        else System.out.println(id + ": " + "UNKNOWN");
+        Optional<String> optName = findByName(id);
+        String name = optName.orElse("UNKNOWN");
+        System.out.println(id + ": " + name.toUpperCase());
     }
 
-    private static String findByName(Long id) {
-        return map.get(id);
+    static Optional<String> findByName(Long id) {
+        String findName = map.get(id);
+        Optional<String> optName = Optional.ofNullable(findName);
+
+        return optName;
     }
 }

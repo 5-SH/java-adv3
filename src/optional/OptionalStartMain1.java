@@ -3,7 +3,7 @@ package optional;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OptionalStartMain2 {
+public class OptionalStartMain1 {
 
     private static final Map<Long, String> map = new HashMap<>();
 
@@ -24,7 +24,7 @@ public class OptionalStartMain2 {
         else System.out.println(id + ": " + "UNKNOWN");
     }
 
-    private static String findByName(Long id) {
+    static String findByName(Long id) {
         return map.get(id);
     }
 }
